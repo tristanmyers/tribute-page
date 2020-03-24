@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    font-size: 100%;
+  }
+  
+  body {
+    font-family: "Prata", serif;
+    font-size: 14px;
+    background-color: hsl(22, 54%, 25%);
+  }
+  
+  @media (min-width: 640px) {body{font-size: 1rem;}}
+  @media (min-width: 960px) {body {font-size: 1.2rem;}}
+  @media (min-width: 1100px) {body {font-size: 1.5rem;}}
+  
+  /* Media Queries: Tablet Landscape */
+  @media screen and (max-width: 1060px) {
+      main { width:67%; }
+      header { width:30%; margin-left:3%;}  
+  }
+  
+  /* Media Queries: Tabled Portrait */
+  @media screen and (max-width: 768px) {
+      main { width:100%; }
+      header { width:100%; margin:0; border:none; }
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 90px auto 90px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header header"
+      ". main ."
+      ". footer .";
+    grid-gap: 30px 0px;
+  }
+  
+  header {
+    position: relative;
+    height: 600px;
+    background-color: grey;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg/1200px-The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg");
+    background-size: 100%;
+    opacity: 1;
+    z-index: -1;
+    grid-area: header;
+  }
+  
+  header p {
+    z-index: 1;
+    color: #d7d7d7;
+  }
+  
+  #quote {
+    text-align: center;
+    /*   font-family: 'Great Vibes', cursive; */
+    /*   font-size: 44px; */
+  }
+  
+  #painting-name {
+    align-self: end;
+    order: 2;
+    padding: 0 0 0 20px;
+    bottom: 10px;
+  }
+  
+  main {
+    color: white;
+    /*   font-size: 28px; */
+    display: grid;
+    grid-template-columns: 90px auto 90px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". title ."
+      ". portrait ."
+      ". content .";
+    grid-gap: 30px 0px;
+    grid-area: main;
+  }
+  
+  #title {
+    grid-area: title;
+    place-self: center;
+  }
+  
+  /* img {
+    height: auto;
+    max-width: 100%;
+  } */
+  
+  #img-div {
+    grid-area: portrait;
+    place-self: center;
+  }
+  
+  main img {
+    display: block;
+    max-width: 642px;
+  }
+  
+  #tribute-info {
+    grid-area: content;
+    padding: 0 0 0 20px;
+  }
+  
+  #painting-div {
+    grid-area: painting;
+    display: block;
+    max-width: 1200px;
+  }
+  
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  footer {
+    color: white;
+    grid-area: footer;
+  }
+  
+  footer h1 {
+    /*   font-size: 18px; */
+  }
+  footer li {
+    /*   font-size: 16px; */
+  }
+  
+  a:link {
+    color: #7474f4;
+  }
+  a:visited {
+    color: blue;
+  }
+  a:hover {
+    color: red;
+  }
+  a:focus {
+    color: red;
+  }
+  
