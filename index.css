@@ -54,6 +54,7 @@ header p {
 }
 
 main {
+  position: relative;
   color: white;
   /*   font-size: 28px; */
   display: grid;
@@ -106,7 +107,7 @@ img {
 footer {
   color: white;
   grid-area: footer;
-  padding: 0 0 10px 0;
+  padding: 0 0 6px 0;
 }
 
 footer h1 {
@@ -114,6 +115,8 @@ footer h1 {
 }
 footer li {
   /*   font-size: 16px; */
+  list-style-type: none;
+  padding: 0 0 5px 0;
 }
 
 a:link {
@@ -129,6 +132,27 @@ a:focus {
   color: red;
 }
 
-@media (min-width: 640px) {body{font-size: 1rem;} footer{font-size: 0.85rem;}}
-@media (min-width: 960px) {body {font-size: 1.2rem;} footer{font-size: 0.85rem;}}
-@media (min-width: 1100px) {body {font-size: 1.5rem;} footer{font-size: 0.85rem;}}
+@media screen and (max-width: 1200px) {
+  
+}
+
+@media screen and (max-width: 660px) {
+  header {
+    display: none;
+  }
+  
+  main {
+    right: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    right: 6.7rem;
+    font-size: 1rem;
+  }
+  
+  footer {
+    font-size: 0.85rem;
+  }
+}
