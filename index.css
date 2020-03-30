@@ -13,22 +13,6 @@ body {
   background-color: hsl(22, 54%, 25%);
 }
 
-@media (min-width: 640px) {body{font-size: 1rem;} footer{font-size: 0.85rem;}}
-@media (min-width: 960px) {body {font-size: 1.2rem;} footer{font-size: 0.85rem;}}
-@media (min-width: 1100px) {body {font-size: 1.5rem;} footer{font-size: 0.85rem;}}
-
-/* Media Queries: Tablet Landscape */
-@media screen and (max-width: 1060px) {
-    main { width:67%; }
-    header { width:30%; margin-left:3%;}  
-}
-
-/* Media Queries: Tabled Portrait */
-@media screen and (max-width: 768px) {
-    main { width:100%; }
-    header { width:100%; margin:0; border:none; }
-}
-
 .container {
   display: grid;
   grid-template-columns: 90px auto 90px;
@@ -45,10 +29,10 @@ header {
   height: 600px;
   background-color: grey;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg/1200px-The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg");
-  background-size: 100%;
   opacity: 1;
   z-index: -1;
   grid-area: header;
+  padding: 45px 0 0 0;
 }
 
 header p {
@@ -144,3 +128,7 @@ a:hover {
 a:focus {
   color: red;
 }
+
+@media (min-width: 640px) {body{font-size: 1rem;} footer{font-size: 0.85rem;}}
+@media (min-width: 960px) {body {font-size: 1.2rem;} footer{font-size: 0.85rem;}}
+@media (min-width: 1100px) {body {font-size: 1.5rem;} footer{font-size: 0.85rem;}}
